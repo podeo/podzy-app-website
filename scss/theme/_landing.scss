@@ -6,16 +6,22 @@
 	font-size: 1.375rem;
 }
 
+.main-text-block {
+	position: absolute;
+	right: 10px;
+}
+
 .hero-section {
 
 	.figure-holder {
-		background: url("../images/hero-figure.png") no-repeat right top;
+		background: url("../images/hero-figure.png") no-repeat left top;
 		background-size: 480px auto;
 		min-height: 600px;
 	}
 	
 	.app-stores {
 		img {
+			margin-top: 15px;
 			height: 45px;
 		}
 	}
