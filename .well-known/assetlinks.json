@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.podeo",
+      "sha256_cert_fingerprints":
+        ["BE:EF:51:D0:AA:2A:2F:7D:8E:C1:81:E4:D4:E5:3D:D7:09:45:8B:95:CC:4F:EB:94:0F:4D:2F:DF:B6:12:3D:86"]
+    }
+  }
+]
