@@ -1,11 +1,1 @@
-[
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.podeo",
-      "sha256_cert_fingerprints":
-        ["BE:EF:51:D0:AA:2A:2F:7D:8E:C1:81:E4:D4:E5:3D:D7:09:45:8B:95:CC:4F:EB:94:0F:4D:2F:DF:B6:12:3D:86"]
-    }
-  }
-]
+[{"relation":["delegate_permission/common.handle_all_urls"],"target":{"namespace":"android_app","package_name":"com.podeo","sha256_cert_fingerprints":["D9:18:0A:EB:7F:66:7F:C3:B1:7B:67:BD:FB:B9:60:58:54:B0:85:3F:CB:54:75:8D:0D:D0:FA:B5:C7:2C:90:CA","BE:EF:51:D0:AA:2A:2F:7D:8E:C1:81:E4:D4:E5:3D:D7:09:45:8B:95:CC:4F:EB:94:0F:4D:2F:DF:B6:12:3D:86","24:31:C5:C5:35:83:97:30:AE:13:69:46:42:C6:C0:49:DD:76:C3:DE:F2:49:47:FE:27:4A:73:79:E3:A8:11:47"]}}]
