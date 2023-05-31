@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Podzy App Download</title>
+</head>
+<body onload="redirectToAppStore()">
+
+<script>
+function redirectToAppStore() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  // Check if the user agent string contains "Android" or "iOS" to determine the device type
+  if (/android/i.test(userAgent)) {
+    window.location.href = "https://play.google.com/store/apps/details?id=com.podeo";
+  } else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+    window.location.href = "https://apps.apple.com/in/app/podzy-podcast-news-videos/id6447624492";
+  } else {
+    // Redirect to a web page if the device is not Android or iOS
+    window.location.href = "https://podzy.app/";
+  }
+}
+</script>
+
+</body>
+</html>
