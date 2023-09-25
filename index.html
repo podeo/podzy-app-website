@@ -21,7 +21,8 @@
 				"name": "Podzy"
 			}
 		}
-		</script>
+	</script>
+	<!--  https://alvarotrigo.com/blog/scroll-horizontally-with-mouse-wheel-vanilla-java/  -->
 
 <!-- Facebook -->
 <meta property="og:site_name" content="Podzy">
@@ -43,7 +44,7 @@
     <!-- Google Font -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Carter+One" />
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Nunito:400,600,700" rel="stylesheet">
-    
+
     <!-- FontAwesome JS-->
 	<script defer src="assets/fontawesome/js/all.min.js"></script>
     
@@ -53,7 +54,6 @@
     
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-
 </head> 
 
 <style>
@@ -62,80 +62,91 @@
 		margin: 0;
 		padding: 0;
 	}
-	.scrolling-container {
+
+	.parent-container {
 		display: flex;
-		overflow-x: auto;
-		padding: 20px;
-		gap: 20px;
+		align-items: center;
+	}
+
+	.heading-container {
+    	margin-right: 16px;
+		margin-left: 100px;
+	}
+
+	.heading-container h2 {
+		font-size: 3rem; 
+		font-weight: bold;
+	}
+
+	.scrolling-container {
+		overflow-x: scroll;
+		overflow-y: hidden;
 		white-space: nowrap;
 	}
-	
-	.card {
-		display: flex;
+
+	.scrolling-container .card {
+		display: inline-block;
 		align-items: center;
 		padding: 10px;
 		border-radius: 8px;
 		overflow: hidden;
 		background-color: #f0f0f0; 
+		width: 600px; 
+		height: 400px;
+		margin-right: 24px;
+		margin-top: 30px;
+		margin-bottom: 40px;
 	}
-
-	.card-content {
+	.scrolling-container .card-content {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 	}
 
-	.text-container {
-    flex: 1;
-    padding-right: 10px;
-}
+	.scrolling-container .text-container {
+		flex: 1;
+		padding-left: 30px;
+		padding-right: 10px;
+		max-width: 400px; 
+		white-space: normal; 
+		overflow-wrap: break-word;
+	}
+	.scrolling-container .text-container h3 {
+		font-size: 24px; 
+		color: #000000;
+		font-weight: bold;
+		margin: 0;
+	}
 
-.text-container {
-    flex: 1;
-	padding-left: 30px;
-    padding-right: 10px;
-    max-width: 400px; /* Adjust this value according to your layout */
-    white-space: normal; /* Allow the text to wrap */
-    overflow-wrap: break-word; /* Breaks long words */
-}
+	.scrolling-container .image-container {
+		flex-shrink: 0;
+	}
 
-.text-container h3 {
-	font-family: 'Poppins', sans-serif;; /* Use a sans-serif font */
-    font-size: 28px; /* Adjust font size as needed */
-	color: #000000;
-    font-weight: bold; /* Make the text bold */
-    margin: 0;
-}
+	.scrolling-container .card img {
+		max-width: 100%; 
+		max-height: 400px; 
+		display: block; 
+		margin: 0 auto; 
+		padding: 22px;
+	}
 
-.image-container {
-    flex-shrink: 0;
-}
-
-	.card img {
-    max-width: 100%; /* This will ensure the image is not wider than the card */
-    max-height: 750px; /* Adjust this value to control the maximum height */
-    display: block; /* This centers the image horizontally */
-    margin: 0 auto; /* This centers the image horizontally */
-}
-
-	.card h1 {
+	.scrolling-container .card h1 {
 		font-size: 24px;
 		margin-bottom: 16px;
 	}
-	.card p {
+	.scrolling-container .card p {
 		font-size: 16px;
 	}
-	.card:nth-child(odd) {
+	.scrolling-container .card:nth-child(odd) {
 		background-color: #f3f3f3;
 	}
-	.card:nth-child(even) {
+	.scrolling-container .card:nth-child(even) {
 		background-color: #f0f2ff;
 	}
 </style>
-
 <body>    
-    <header class="header">
+    <!--<header class="header">
         <div class="branding">  
             <div class="container position-relative">
 			<nav class="navbar navbar-expand-lg" >
@@ -153,10 +164,42 @@
 	            
             </div>
         </div>
-    </header>
+    </header>--> 
+
+	<header class="header">
+		<div class="branding">  
+			<div class="container position-relative">
+				<nav class="navbar navbar-expand-lg">
+					<h1 class="site-logo">
+						<a class="navbar-brand" href="/">
+							<img class="w-50 logo-icon" src="assets/images/logo.svg" alt="Podzy Logo">
+							<span style="font-family: 'Carter One';font-style: normal;font-variant: normal;color: #0071bc">Podzy</span>
+						</a>
+					</h1>
+					<!-- Navigation Elements -->
+					<ul class="navbar-nav ml-auto"> <!-- Added ml-auto class here -->
+						<li class="nav-item">
+							<a class="nav-link" href="#section1">Section 1</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section2">Section 2</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section3">Section 3</a>
+						</li>
+					</ul>
+					<ul class="social-list list-inline mb-0">
+						<li class="list-inline-item"><a class="text-dark" href="https://twitter.com/PodzyApp"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a class="text-dark" href="https://www.instagram.com/podzy_app/"><i class="fab fa-instagram fa-fw"></i></a></li>
+					</ul>
+				</nav>     
+			</div>
+		</div>
+	</header>
+	
+	
     
-    
-    <section class="hero-section">
+    <section style="height: 100vh;" class="hero-section">
 	    <div class="container">
 		    <div class="row figure-holder">
 			    <div class="main-text-block col-12 col-md-6 pt-3 pt-md-4">
@@ -173,63 +216,64 @@
 	    </div>
     </section>
 
-	<div class="scrolling-container">
-        <div class="card">
-			<div class="card-content">
-				<div class="text-container">
-					<h3>Read the breaking news headlines, latest articles, stories and anything you discover online.</h3>
-				</div>
-				<div class="image-container">
-					<img src="assets/images/news.png" alt="News Image">
-				</div>
-			</div>
-        </div>
-        <div class="card">
-			<div class="card-content">
-				<div class="text-container">
-					<h3>The No #1 app to watch trending videos that are organized under various topics.</h3>
-				</div>
-				<div class="image-container">
-					<img src="assets/images/video.png" alt="Video Image">
+	<div style="height: 100vh;" class="parent-container">
+		<div class="heading-container">
+			<h2 class="heading">Things you can do on Podzy 👉</h2>
+		</div>
+		<div class="scrolling-container">
+			<div class="card">
+				<div class="card-content">
+					<div class="text-container">
+						<h3>Read the breaking news headlines, latest articles, stories and anything you discover online.</h3>
+					</div>
+					<div class="image-container">
+						<img src="assets/images/news.png" alt="News Image">
+					</div>
 				</div>
 			</div>
-        </div>
-
-		<!-- 
-		<div class="card">
-			<div class="card-content">
-				<div class="text-container">
-					<h3>Enjoy a delightful podcast experience. Find your next obsession with our hand-curated podcast recommendations for easy discovery</h3>
+			<div class="card">
+				<div class="card-content">
+					<div class="text-container">
+						<h3>The No #1 app to watch trending videos that are organized under various topics.</h3>
+					</div>
+					<div class="image-container">
+						<img src="assets/images/video.png" alt="Video Image">
+					</div>
 				</div>
-				<div class="image-container">
-					<img src="assets/images/podcast.png" alt="Video Image">
+			</div>
+			<div class="card">
+				<div class="card-content">
+					<div class="text-container">
+						<h3>Enjoy a delightful podcast experience. Find your next obsession with our hand-curated podcast recommendations for easy discovery</h3>
+					</div>
+					<div class="image-container">
+						<img src="assets/images/podcast.png" alt="Video Image">
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-content">
+					<div class="text-container">
+						<h3>We help you discover topics like tech, business, food, entrepreneurship, design, politics and more.</h3>
+					</div>
+					<div class="image-container">
+						<img src="assets/images/discover.png" alt="Video Image">
+					</div>
+				</div>
+			</div>
+	
+			<div class="card">
+				<div class="card-content">
+					<div class="text-container">
+						<h3>Enjoy hands-free experience with our text to speech technology and get updated with the latest happenings even when you are cooking, commuting or working out</h3>
+					</div>
+					<div class="image-container">
+						<img src="assets/images/listen.png" alt="Video Image">
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="card">
-			<div class="card-content">
-				<div class="text-container">
-					<h3>We help you discover topics like tech, business, food, entrepreneurship, design, politics and more.</h3>
-				</div>
-				<div class="image-container">
-					<img src="assets/images/podcast.png" alt="Video Image">
-				</div>
-			</div>
-		</div>
-
-		<div class="card">
-			<div class="card-content">
-				<div class="text-container">
-					<h3>Enjoy hands-free experience with our text to speech technology and get updated with the latest happenings even when you are cooking, commuting or working out</h3>
-				</div>
-				<div class="image-container">
-					<img src="assets/images/listen.png" alt="Video Image">
-				</div>
-			</div>
-		</div>
-		-->
 	</div>
-
 
 <!-- Trusted By so and so section -->     
     <section style="display:none" class="logos-section theme-bg-primary py-5 text-center">
@@ -552,8 +596,6 @@
     <!-- Page Specific JS -->
     <script type="text/javascript" src="assets/plugins/jquery-flipster/dist/jquery.flipster.min.js"></script> 
     <script type="text/javascript" src="assets/js/flipster-custom.js"></script> 
-
-
 </body>
 </html> 
 
