@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .main-heading {
+    text-align: center;
+    padding: 20px;
+    font-size: 4em;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  .grid-item {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+  }
+  .image {
+    width: 100%;
+    height: 250px;
+    background-color: #ddd;
+  }
+
+  .image img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  .description {
+    margin: 10px 0;
+    margin-top: 20px;
+  }
+  .read-more {
+    display: inline-block;
+    background-color: #0096FF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .read-more:hover {
+    background-color: #0000FF;
+  }
+</style>
+</head>
+<body>
+<h1 class="main-heading">Blog</h1>
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="image"><img src="assets/images/rabbit_hole.png" alt="rabbit hole"></div>
+    <div class="title">Breaking the Scroll: Unveiling the Mechanics of Endless Content Recommendations</div>
+    <div class="description">Explore how algorithms on News apps and YouTube curate endless content, leading to mindless internet consumption. Uncover the science behind personalized recommendations, their impact on user behavior, and strategies for mindful digital use.</div>
+    <a href="podzy_scroll.html" class="read-more">Read More</a>
+  </div>
+  <div class="grid-item">
+    <div class="image"><img src="assets/images/podcast_wild.jpg" alt="Podcast Feed"></div>
+    <div class="title">Lost in the Podcast Wilderness: The Urgent Need for a Feed-Based Discovery Platform</div>
+    <div class="description">Navigating the vast podcast landscape can be overwhelming due to a lack of personalized discovery tools. This article explores the need for a feed-based platform to curate content tailored to individual tastes, enhancing the user's listening experience and addressing the current limitations in podcast discovery.</div>
+    <a href="podcast_feed.html" class="read-more">Read More</a>
+  </div>
+  <div class="grid-item">
+    <div class="image"><img src="assets/images/vido_feed.png" alt="Video Feed"></div>
+    <div class="title">The Uncharted Terrain: The Absence of a Dedicated Video Content Curation Platform</div>
+    <div class="description">Navigating the uncharted terrain of video curation, this blog explores the glaring absence of dedicated platforms for curated video content. Discover the untapped potential and compelling need for a solution that revolutionizes the way we discover and consume personalized, high-quality videos.</div>
+    <a href="video_feed.html" class="read-more">Read More</a>
+  </div>
+  <!-- Repeat .grid-item for more blog posts -->
+</div>
+
+</body>
+</html>
+
