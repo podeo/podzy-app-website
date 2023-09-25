@@ -2,16 +2,26 @@
 <html lang="en"> 
 <head>
     <title>Podzy: Podcasts, News & Videos | Made in India</title>
-    
-    <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="assets/images/logo.svg"> 
-    
-<meta name="description" content="A one stop destination to Read, Listen &amp; Watch all your favorite News &amp; Stories">
-<meta name="keywords" content="Podzy,News,Magazines,Articles,Stories,Podcast,Video,TTS,Text to Speech,Videos,Podcasts,app,Android">
+    <meta name="author" content="Podzy">    
+	<meta name="description" content="Podzy is a one-stop destination to Read, Listen &amp; Watch all your favorite News &amp; Stories. Discover the world of Podzy!">
+    <meta name="keywords" content="Podzy,News,Magazines,Articles,Stories,Podcast,Video,TTS,Text to Speech,Videos,Podcasts,app,Android,Podzy app,iOS">
+	<link rel="shortcut icon" href="assets/images/logo.svg"> 
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"url": "https://podzy.in",
+			"name": "Podzy",
+			"description": "A one-stop destination to Read, Listen & Watch all your favorite News & Stories.",
+			"publisher": {
+				"@type": "Organization",
+				"name": "Podzy"
+			}
+		}
+		</script>
 
 <!-- Facebook -->
 <meta property="og:site_name" content="Podzy">
@@ -46,6 +56,84 @@
 
 </head> 
 
+<style>
+	body {
+		font-family: 'Arial', sans-serif;
+		margin: 0;
+		padding: 0;
+	}
+	.scrolling-container {
+		display: flex;
+		overflow-x: auto;
+		padding: 20px;
+		gap: 20px;
+		white-space: nowrap;
+	}
+	
+	.card {
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: #f0f0f0; 
+	}
+
+	.card-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.text-container {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.text-container {
+    flex: 1;
+	padding-left: 30px;
+    padding-right: 10px;
+    max-width: 400px; /* Adjust this value according to your layout */
+    white-space: normal; /* Allow the text to wrap */
+    overflow-wrap: break-word; /* Breaks long words */
+}
+
+.text-container h3 {
+	font-family: 'Poppins', sans-serif;; /* Use a sans-serif font */
+    font-size: 28px; /* Adjust font size as needed */
+	color: #000000;
+    font-weight: bold; /* Make the text bold */
+    margin: 0;
+}
+
+.image-container {
+    flex-shrink: 0;
+}
+
+	.card img {
+    max-width: 100%; /* This will ensure the image is not wider than the card */
+    max-height: 750px; /* Adjust this value to control the maximum height */
+    display: block; /* This centers the image horizontally */
+    margin: 0 auto; /* This centers the image horizontally */
+}
+
+	.card h1 {
+		font-size: 24px;
+		margin-bottom: 16px;
+	}
+	.card p {
+		font-size: 16px;
+	}
+	.card:nth-child(odd) {
+		background-color: #f3f3f3;
+	}
+	.card:nth-child(even) {
+		background-color: #f0f2ff;
+	}
+</style>
+
 <body>    
     <header class="header">
         <div class="branding">  
@@ -53,84 +141,94 @@
 			<nav class="navbar navbar-expand-lg" >
 				<h1 class="site-logo">
 					<a class="navbar-brand" href="/">
-						<img class="w-50 logo-icon" src="assets/images/logo.svg" alt="logo">
+						<img class="w-50 logo-icon" src="assets/images/logo.svg" alt="Podzy Logo">
 						<span style="font-family: 'Carter One';font-style: normal;font-variant: normal;color: #0071bc">Podzy</span>
 					</a>
 				</h1>
 				</nav>
-				<!-- // Free Version ONLY -->
 				<ul class="social-list list-inline mb-0 position-absolute">
 		         <li class="list-inline-item"><a class="text-dark" href="https://twitter.com/PodzyApp"><i class="fab fa-twitter fa-fw"></i></a></li>
 	                <li class="list-inline-item"><a class="text-dark" href="https://www.instagram.com/podzy_app/"><i class="fab fa-instagram fa-fw"></i></a></li>
-	            </ul><!--//social-list-->
+	            </ul>
 	            
-            </div><!--//container-->
-            
-        </div><!--//branding-->
-        
-        
-    </header><!--//header-->
+            </div>
+        </div>
+    </header>
     
     
     <section class="hero-section">
 	    <div class="container">
 		    <div class="row figure-holder">
 			    <div class="main-text-block col-12 col-md-6 pt-3 pt-md-4">
-				    <h2 class="site-headline font-weight-bold mt-lg-5 pt-lg-5">Podcasts, News & Videos</h2>
-				    <div class="site-tagline mb-3">Your one stop destination to Read, Listen and Watch all your favorite News & Stories</div>
+				    <h2 class="site-headline font-weight-bold mt-lg-5 pt-lg-5">Podzy - Podcasts, News & Videos</h2>
+				    <div class="site-tagline mb-3">Listen to your favorite podcasts, watch trending videos, and stay updated with the latest news on the topics you love.</div>
 				    <div class="cta-btns">
 					    <ul class="app-stores list-unstyled list-inline mx-auto mx-md-0 d-inline-block">
-						    <!--<li class="list-inline-item mr-3"><a href="#"><img class="ios" src="assets/images/appstore-apple.svg" alt="app-store"></a></li>-->
+						    <li class="list-inline-item mr-3"><a href="https://apps.apple.com/in/app/podzy-podcast-news-videos/id6447624492"><img class="ios" src="assets/images/appstore-apple.svg" alt="app-store"></a></li>
 						    <li class="list-inline-item"><a href="https://play.google.com/store/apps/details?id=com.podeo"><img class="android" src="assets/images/appstore-android.svg" alt="google play"></a></li>
 					    </ul>
 				    </div>
 			    </div>
-		    </div><!--//row-->
+		    </div>
 	    </div>
-    </section><!--//hero-section-->
+    </section>
 
+	<div class="scrolling-container">
+        <div class="card">
+			<div class="card-content">
+				<div class="text-container">
+					<h3>Read the breaking news headlines, latest articles, stories and anything you discover online.</h3>
+				</div>
+				<div class="image-container">
+					<img src="assets/images/news.png" alt="News Image">
+				</div>
+			</div>
+        </div>
+        <div class="card">
+			<div class="card-content">
+				<div class="text-container">
+					<h3>The No #1 app to watch trending videos that are organized under various topics.</h3>
+				</div>
+				<div class="image-container">
+					<img src="assets/images/video.png" alt="Video Image">
+				</div>
+			</div>
+        </div>
 
-<div style="margin-top:150px">
-	<div style="margin-left:180px;float:left;margin-top:80px">
-	<h1>Read the Latest News</h1>
-        <p style="width:500px; font-size:20px">Read the breaking news headlines, latest articles, stories and anything you discover online.</p>
+		<!-- 
+		<div class="card">
+			<div class="card-content">
+				<div class="text-container">
+					<h3>Enjoy a delightful podcast experience. Find your next obsession with our hand-curated podcast recommendations for easy discovery</h3>
+				</div>
+				<div class="image-container">
+					<img src="assets/images/podcast.png" alt="Video Image">
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-content">
+				<div class="text-container">
+					<h3>We help you discover topics like tech, business, food, entrepreneurship, design, politics and more.</h3>
+				</div>
+				<div class="image-container">
+					<img src="assets/images/podcast.png" alt="Video Image">
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-content">
+				<div class="text-container">
+					<h3>Enjoy hands-free experience with our text to speech technology and get updated with the latest happenings even when you are cooking, commuting or working out</h3>
+				</div>
+				<div class="image-container">
+					<img src="assets/images/listen.png" alt="Video Image">
+				</div>
+			</div>
+		</div>
+		-->
 	</div>
-	<img style="margin-left:100px" src="assets/images/news.png" width="280" height="560"></a></li>
-</div>
-
-<div style="margin-top:150px">
-	<div style="margin-left:180px;float:left;margin-top:80px">
-	<h1>Watch Trending Videos</h1>
-	<p style="width:500px; font-size:20px">The No #1 app to watch trending videos that are organized under various topics.</p>
-	</div>
-	<img style="margin-left:100px" src="assets/images/video.png" width="250" height="500"></a></li>
-</div>
-
-<div style="margin-top:150px">
-	<div style="margin-left:180px;float:left;margin-top:80px">
-	<h1>Listen to Popular Podcasts</h1>
-	<p style="width:500px; font-size:20px">Enjoy a delightful podcast experience. Find your next obsession with our hand-curated podcast recommendations for easy discovery</p>
-	</div>
-	<img style="margin-left:100px" src="assets/images/podcast.png" width="250" height="500"></a></li>
-</div>
-
-<div style="margin-top:150px">
-	<div style="margin-left:180px;float:left;margin-top:80px">
-	<h1>Browse various topics</h1>
-	<p style="width:500px; font-size:20px">We help you discover topics like tech, business, food, entrepreneurship, design, politics and more.</p>
-	</div>
-	<img style="margin-left:100px" src="assets/images/discover.png" width="250" height="500"></a></li>
-</div>
-
-<div style="margin-top:150px">
-	<div style="margin-left:180px;float:left;margin-top:80px">
-	<h1>Listen to any news</h1>
-	<p style="width:500px; font-size:20px">Enjoy hands-free experience with our text to speech technology and get updated with the latest happenings even when you are cooking, commuting or working out</p>
-	</div>
-	<img style="margin-left:100px" src="assets/images/listen.png" width="250" height="500"></a></li>
-</div>
-
-
 
 
 <!-- Trusted By so and so section -->     
@@ -182,21 +280,21 @@
 				    <div class="item-inner text-center p-3 p-lg-5">
 					    <img class="mb-3" src="assets/images/icon-target.svg" alt="" />
 					    <h5>Focused on UX</h5>
-					    <div>Use this area to list your app's key benefits. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </div>
+					    <div>Use this area to list your app's key benefits.</div>
 				    </div><!--//item-inner-->
 			    </div><!--//item-->
 			    <div class="item col-12 col-lg-4">
 				    <div class="item-inner text-center p-3 p-lg-5">
 					    <img class="mb-3" src="assets/images/icon-rocket.svg" alt="" />
 					    <h5>Convert Users</h5>
-					    <div>Use this area to list your app's key benefits. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </div>
+					    <div>Use this area to list your app's key benefits.  </div>
 				    </div><!--//item-inner-->
 			    </div><!--//item-->
 			    <div class="item col-12 col-lg-4">
 				    <div class="item-inner text-center p-3 p-lg-5">
 					    <img class="mb-3" src="assets/images/icon-cogs.svg" alt="" />
 					    <h5>Easy Customisations</h5>
-					    <div>Use this area to list your app's key benefits. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </div>
+					    <div>Use this area to list your app's key benefits.  </div>
 				    </div><!--//item-inner-->
 			    </div><!--//item-->
 		    </div><!--//row-->
@@ -287,7 +385,7 @@
 					    <div class="item-inner shadow-lg rounded">
 						    <h5 class="mb-2">Amazing App!</h5>
 						    <div class="ratings text-primary mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-						    <div class="mb-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+						    <div class="mb-3"> ... 
 						    </div>
 						    <div class="source media flex-column flex-md-row">
 							    <img class="source-profile rounded-circle mr-md-3 mx-auto mx-md-0" src="assets/images/users/user-1.jpg" alt="" />
@@ -409,33 +507,10 @@
     <footer class="footer theme-bg-primary">
 	    <div class="container py-5 mb-3">
 		    <div class="row">
-
-			    <!--
-			    <div class="footer-col col-6 col-lg-3">
-				    <h4 class="col-heading">About Us</h4>
-				    <ul class="list-unstyled">
-					    <li><a href="#">Our Story</a></li>
-					    <li><a href="#">Pricing</a></li>
-					    <li><a href="#">Contact</a></li>
-					    <li><a href="#">Jobs</a></li>
-					    
-				    </ul> 
-			    </div>
-			    <div class="footer-col col-6 col-lg-3">
-				    <h4 class="col-heading">Resources</h4>
-				    <ul class="list-unstyled">
-					    <li><a href="#">FAQs</a></li>
-					    <li><a href="#">Blog</a></li>
-					    <li><a href="#">Support</a></li>
-					    <li><a href="#">Developer APIs</a></li>
-				    </ul>
-			    </div> -->
 			    <div class="footer-col col-6 col-lg-3">
 				    <h4 class="col-heading">Legal</h4>
 				    <ul class="list-unstyled">
 					    <li><a href="https://podzy.in/privacy_policy.html">Privacy</a></li>
-					    <!--<li><a href="#">Terms of Services</a></li>-->
-					    <!-- <li><a href="#">Security</a></li> -->
 				    </ul>
 			    </div><!--//footer-col-->
 			    <div class="footer-col col-6 col-lg-3">
@@ -448,16 +523,9 @@
 				     </div>
 				    <ul class="social-list list-unstyled mb-0">
 					    <li class="list-inline-item"><a href="https://www.instagram.com/podzy_app/"><i class="fab fa-instagram fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://twitter.com/PodzyApp"><i class="fab fa-twitter fa-fw"></i></a></li>
-		                <!--<li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>-->
-		                
+			            <li class="list-inline-item"><a href="https://twitter.com/PodzyApp"><i class="fab fa-twitter fa-fw"></i></a></li>		                
 		            </ul><!--//social-list-->
-		            
-		            <!--<div class="mb-2">
-			            Company Name<br>
-			            2419 Locust View Drive <br>
-			            San Francisco, CA, 94143
-		            </div>-->	            
+		               
 			    </div><!--//footer-col-->
 		    </div><!--//row-->
 	    </div><!--//container-->
@@ -466,9 +534,10 @@
 	    </div>
 	    <div class="download-area py-4">
 		    <div class="container text-center">
-			    <h3 class="mb-3">Get the app</h3>
+			    <h3 class="mb-3">Get the Podzy App</h3>
 			    <ul class="app-stores list-unstyled list-inline mx-auto  d-inline-block">
-				    <li class="list-inline-item"><a href="#"><img class="android" src="assets/images/appstore-android.svg" alt="google play"></a></li>
+					<li class="list-inline-item mr-3"><a href="https://apps.apple.com/in/app/podzy-podcast-news-videos/id6447624492"><img class="ios" src="assets/images/appstore-apple.svg" alt="Podzy on app-store"></a></li>
+				    <li class="list-inline-item"><a href="https://play.google.com/store/apps/details?id=com.podeo"><img class="android" src="assets/images/appstore-android.svg" alt="Podzy on Google Play"></a></li>
 			    </ul>
 		    </div><!--//container-->
 	    </div><!--//download-area-->
